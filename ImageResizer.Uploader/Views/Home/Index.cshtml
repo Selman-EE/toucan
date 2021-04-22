@@ -1,0 +1,38 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<div class="row">
+		<h2>File Upload & Image Preview</h2>
+	</div>
+	<div class="row">
+		<form enctype="multipart/form-data" method="post" asp-action="Upload" asp-controller="Home">
+			<div class="form-group">
+				<label>Witdh</label>
+				<input type="text" value="" name="model.Witdh" />
+			</div>
+			<div class="form-group">
+				<label>Height</label>
+				<input type="text" value="" name="model.Height" />
+			</div>
+			<div class="form-group">
+				<label>Select Files</label>
+				<input type="file" name="model.files" id="files" accept="image/*" multiple />
+			</div>
+			<div class="form-group float-left">				
+				<input type="submit" value="Upload" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<script src="~/jquery/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		// todo: File upload html will change
+		// todo: File preview will add
+		// todo: Upload process will be XHR req
+	});
+</script>
+
